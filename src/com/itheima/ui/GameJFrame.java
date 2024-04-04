@@ -299,7 +299,13 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             jDialog.getContentPane().add(jLabel);
             //5.设置弹框的大小
             jDialog.setSize(344,344);
-
+            //6.让弹框置顶 , 居中
+            jDialog.setAlwaysOnTop(true);
+            jDialog.setLocationRelativeTo(null);
+            //7.弹框不关闭，则无法操作下面的界面
+            jDialog.setModal(true);
+            //8.让弹框展示
+            jDialog.setVisible(true);
         }
     }
 }
